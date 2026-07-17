@@ -1,0 +1,32 @@
+def railway_booking():
+    print("===== RAILWAY TICKET BOOKING SYSTEM =====")
+
+    name = input("Enter Passenger Name: ")
+    age = int(input("Enter Age: "))
+    gender = input("Enter Gender (Male/Female): ")
+    source = input("Enter Source Station: ")
+    destination = input("Enter Destination Station: ")
+    train = input("Enter Train Name: ")
+    seat = input("Enter Seat Type (Sleeper/AC): ")
+
+    if seat.lower() == "sleeper":
+        fare = 500
+    elif seat.lower() == "ac":
+        fare = 1000
+    else:
+        fare = 0
+
+    print("\n========== TICKET ==========")
+    print("Passenger Name :", name)
+    print("Age            :", age)
+    print("Gender         :", gender)
+    print("Train Name     :", train)
+    print("From           :", source)
+    print("To             :", destination)
+    print("Seat Type      :", seat)
+    print("Ticket Fare    : Rs.", fare)
+    print("============================")
+    print("Booking Successful!")
+    print("Have a Safe Journey!")
+
+railway_booking()
