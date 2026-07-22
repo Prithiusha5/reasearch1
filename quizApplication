@@ -1,0 +1,63 @@
+score = 0
+
+questions = [
+    {
+        "question": "1. What is the capital of India?",
+        "options": ["A. Chennai", "B. Mumbai", "C. New Delhi", "D. Kolkata"],
+        "answer": "C"
+    },
+    {
+        "question": "2. Which language is used for Python programming?",
+        "options": ["A. Python", "B. Java", "C. C++", "D. HTML"],
+        "answer": "A"
+    },
+    {
+        "question": "3. How many continents are there in the world?",
+        "options": ["A. 5", "B. 6", "C. 7", "D. 8"],
+        "answer": "C"
+    },
+    {
+        "question": "4. Which planet is known as the Red Planet?",
+        "options": ["A. Earth", "B. Mars", "C. Venus", "D. Jupiter"],
+        "answer": "B"
+    },
+    {
+        "question": "5. What is the output of 5 + 3 * 2?",
+        "options": ["A. 16", "B. 11", "C. 13", "D. 10"],
+        "answer": "B"
+    }
+]
+
+print("========== QUIZ APPLICATION ==========")
+print("Choose the correct option (A, B, C, or D)\n")
+
+for q in questions:
+    print(q["question"])
+    for option in q["options"]:
+        print(option)
+
+    user_answer = input("Your Answer: ").upper()
+
+    if user_answer == q["answer"]:
+        print("✅ Correct!\n")
+        score += 1
+    else:
+        print("❌ Wrong!")
+        print("Correct Answer:", q["answer"], "\n")
+
+print("========== RESULT ==========")
+print("Total Questions:", len(questions))
+print("Correct Answers:", score)
+print("Wrong Answers:", len(questions) - score)
+
+percentage = (score / len(questions)) * 100
+print("Score:", percentage, "%")
+
+if percentage >= 80:
+    print("Excellent! 🎉")
+elif percentage >= 60:
+    print("Good Job! 👍")
+elif percentage >= 40:
+    print("Keep Practicing! 😊")
+else:
+    print("Better Luck Next Time! 📚")
